@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codigo QR</title>
+    <style>
+        body{
+            margin: 20px;
+        }
+        h1,h2{
+            color: aqua;
+        }
+        label{
+            font-weight: bold;
+        }
+        #input-text{
+            padding: 8px;
+            margin-top: 10px;
+            width: 300px;
+            font-size: 1em;
+        }
+        #contenedor{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a la Página 2</h1>
+    <a href="/calculadora">Volver a la Página 1</a> | 
+    <label for="input-text">Ingresa un teexto o URL para generar el QR</label>
+    <input type="text" id="input-text" placeholder="Escriba aquí"/>
+    <button onclick="generar()">Generar QR</button>
+
+    <!-- Contiene el QR -->
+    <div id="contenedor"></div>
+
+
+    
+</body>
+<!-- Link para crear el QR -->
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script> 
+<script src="app2.js"></script>
+</html>
