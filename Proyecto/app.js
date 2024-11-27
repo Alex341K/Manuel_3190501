@@ -32,7 +32,6 @@ db.connect(err=>{
 });
 
 //iniciamos el server
-
 const port = 3009;
 app.listen(port,()=>{
     console.log(`Servidor en funcionamiento desde http://localhost:${port}`);
@@ -53,12 +52,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/add', (req, res) => {
-    res.render('add'); // Renderiza el formulario
+    res.render('add'); // Envia hacia el formulario
 });
 
 
-//agregar usuarios
-
+//agregar productos
 app.post('/add', (req, res) => {
     const { nombre, tipo, cantidad, espacio, valor, precio, caducidad_dias } = req.body;
     const query = 'INSERT INTO `productos` (`nombre`, `tipo`, `cantidad`, `espacio`, `valor`, `precio`, `caducidad_dias`) VALUES (?, ?, ?, ?, ?, ?, ?)';
@@ -72,7 +70,7 @@ app.post('/add', (req, res) => {
     });
 });
 
-// Mostrar el formulario de edición de un usuario
+// Mostrar el formulario de edición de un producto
 app.get('/edit/:id', (req, res) => {
     const { id } = req.params; // Obtén el ID del parámetro de la URL
     const query = 'SELECT * FROM productos WHERE id = ?';
