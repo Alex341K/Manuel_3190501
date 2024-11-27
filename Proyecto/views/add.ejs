@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar producto</title>
+    <link rel="stylesheet" href="/styles/diseño.css">
+</head>
+
+<body>
+    <h1>Agregar producto</h1>
+    <form action="/add" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    
+        <label for="tipo">Tipo:</label>
+        <input type="text" id="tipo" name="tipo" required>
+    
+        <label for="cantidad">Cantidad:</label>
+        <input type="int" id="cantidad" name="cantidad" required>
+    
+        <label for="espacio">Espacio:</label>
+        <input type="int" id="espacio" name="espacio" required>
+    
+        <label for="valor">Valor:</label>
+        <input type="float" id="valor" name="valor" required>
+    
+        <label for="precio">Precio:</label>
+        <input type="float" id="precio" name="precio" required>
+    
+        <label for="caducidad_dias">Caducidad:</label>
+        <input type="int" id="caducidad_dias" name="caducidad_dias">
+    
+        <button type="submit">Agregar</button>
+    </form>
+    
+</body>
+</html>

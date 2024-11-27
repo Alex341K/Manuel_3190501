@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD con Node.js y MySQL</title>
+    <link rel="stylesheet" href="/styles/diseño.css">
+    
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Cantidad</th>
+            <th>Espacio</th>
+            <th>Valor</th>
+            <th>Precio</th>
+            <th>Fecha</th>
+            <th>Caducidad</th>
+        </tr>
+        <% productos.forEach(producto => { %>
+        <tr>
+            <td><%= producto.id %></td>
+            <td><%= producto.nombre %></td>
+            <td><%= producto.tipo %></td>
+            <td><%= producto.cantidad %></td>
+            <td><%= producto.espacio %></td>
+            <td><%= producto.valor %></td>
+            <td><%= producto.precio %></td>
+            <td><%= producto.fecha_Recibo %></td>
+            <td><%= producto.caducidad_dias %></td>
+        
+            <td>
+                <a href="/edit/<%= producto.id %>">Editar</a> |
+                <a href="/delete/<%= producto.id %>">Eliminar</a>
+            </td>
+        </tr>
+        <% }); %>
+    </table>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="/add" class="btn-agregar">Agregar Producto</a>
+    </div>
+    
+</body>
+</html>

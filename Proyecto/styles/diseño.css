@@ -1,0 +1,147 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #274964;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #e8f1dd;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the form */
+    display: center;
+    flex-direction: column;
+    gap: 25px; /* Space between form fields */
+}
+
+/* Flexbox for labels and inputs */
+.form-group {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    gap: 10px; /* Space between label and input */
+}
+
+/* Label styles */
+form label {
+    font-weight: bold;
+    color: #333;
+    width: 250px; /* Fixed width for the label */
+}
+
+/* Input styles */
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Inputs fill remaining space */
+    max-width: 480px; /* Optional: Set max width for input fields */
+}
+
+/* Button styles */
+button {
+    background-color: #9c4887;
+    color: white;
+    display: block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-left: 250px; /* Espacio extra a la izquierda del botón */
+    margin-top: 20px;  /* Espacio adicional arriba del botón */
+}
+
+button:hover {
+    background-color: #7ca9dd;
+}
+
+/* Table styles */
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    table-layout: auto;
+}
+
+th, td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #323f7e;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action links styles */
+td a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #007BFF;
+    margin: 0 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+td a:hover {
+    background-color: #78dddd;
+    color: rgb(0, 0, 0);
+}
+
+/* Add user button */
+td a[href="/add"] {
+    background-color: #435099;
+    color: white;
+    border: none;
+}
+
+td a[href="/add"]:hover {
+    background-color: #84dfc8;
+    color: #000000;
+}
+
+/* Estilo del botón Agregar */
+.btn-agregar {
+    background-color: #435099;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+    background-color: #84dfc8;
+    color:#000000
+}
