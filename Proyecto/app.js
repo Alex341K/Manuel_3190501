@@ -90,7 +90,7 @@ app.get('/edit/:id', (req, res) => {
     });
 });
 
-// Ruta para actualizar productos
+// Modulo para actualizar productos
 app.post('/update/:id', (req, res) => {
     const { id } = req.params;
     const {  nombre, tipo, cantidad, espacio, valor, precio, caducidad_dias } = req.body;
@@ -106,7 +106,7 @@ app.post('/update/:id', (req, res) => {
 });
 
 
-//eliminar usuario
+//eliminar producto
 
 app.get('/delete/:id', (req, res) => {
     const { id } = req.params;
